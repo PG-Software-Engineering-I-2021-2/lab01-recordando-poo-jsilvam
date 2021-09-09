@@ -1,3 +1,5 @@
+package main.java;
+
 public class Main {
     public static void main(String[] args) {
         Automovil auto = new Automovil(100, 10, 0.9);

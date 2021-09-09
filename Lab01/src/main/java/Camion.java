@@ -1,3 +1,5 @@
+package main.java;
+
 public class Camion extends Vehiculo{
     public Camion(double capacidadCombustible, double cantidadCombustible, double consumoPorKilometro) {
         super(capacidadCombustible, cantidadCombustible, consumoPorKilometro);
@@ -7,9 +9,9 @@ public class Camion extends Vehiculo{
     public void abastecer(double combustible) {
         if (combustible + this.cantidadCombustible <= this.capacidadCombustible) {
             this.cantidadCombustible += (combustible * 0.95);
-            System.out.println("La cantidad de combustible del automovil es: " + this.cantidadCombustible);
+            System.out.println("La cantidad de combustible del camión es: " + String.format("%.2f", this.cantidadCombustible));
         } else {
-            System.out.println("Automovil no se puede reabastecer el tanque, está lleno.");
+            System.out.println("Camión no se puede reabastecer el tanque, está lleno.");
         }
     }
 }

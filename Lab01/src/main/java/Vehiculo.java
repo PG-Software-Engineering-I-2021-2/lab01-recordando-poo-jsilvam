@@ -1,3 +1,5 @@
+package main.java;
+
 public class Vehiculo {
     protected double capacidadCombustible;
     protected double cantidadCombustible;
@@ -15,11 +17,12 @@ public class Vehiculo {
 
     public void viajar(int distancia) {
         double combustibleRequerido = this.consumoPorKilometro * distancia;
+        String clase = this.getClass().getSimpleName();
         if (combustibleRequerido > this.cantidadCombustible) {
-            System.out.println("Automovil necesita reabastecimiento de combustible");
+            System.out.println(clase + " necesita reabastecimiento de combustible");
         } else {
             this.cantidadCombustible -= combustibleRequerido;
-            System.out.println("Autmovil viajo " + distancia + " km y aun tiene " + this.cantidadCombustible + " de combustible");
+            System.out.println(clase + " viajo " + String.format(" %.1f", (double)distancia) + " km y aún tiene " + String.format("%.2f", this.cantidadCombustible) + " de combustible");
         }
     }
 }
