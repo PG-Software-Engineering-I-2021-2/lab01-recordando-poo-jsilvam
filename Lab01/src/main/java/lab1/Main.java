@@ -1,4 +1,4 @@
-package main.java;
+package lab1;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,5 +11,6 @@ public class Main {
         camion.abastecer(90);
         camion.abastecer(100);
         camion.viajar(12);
+
     }
 }

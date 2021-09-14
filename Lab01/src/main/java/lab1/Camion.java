@@ -1,4 +1,4 @@
-package main.java;
+package lab1;
 
 public class Camion extends Vehiculo{
     public Camion(double capacidadCombustible, double cantidadCombustible, double consumoPorKilometro) {
