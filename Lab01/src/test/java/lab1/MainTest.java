@@ -36,7 +36,9 @@ public class MainTest {
 
     @Test(invocationCount = 10, threadPoolSize = 80)
     public static void Test04(){
-        Assert.assertEquals(Main.test(),true);   
+        Assert.assertEquals(Main.test(0.9),true);   
+        Assert.assertEquals(Main.test(-0.9),true);   
+        Assert.assertEquals(Main.test(0),true);   
     }
     
 }
