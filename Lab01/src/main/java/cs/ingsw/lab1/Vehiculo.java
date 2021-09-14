@@ -1,4 +1,4 @@
-package lab1;
+package cs.ingsw.lab1;
 
 public class Vehiculo {
     protected double capacidadCombustible;

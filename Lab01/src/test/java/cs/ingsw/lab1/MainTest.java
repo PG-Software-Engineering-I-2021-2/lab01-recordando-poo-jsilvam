@@ -1,10 +1,10 @@
-package lab1;
+package cs.ingsw.lab1;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.logging.Logger;
 import java.io.IOException;
 
-import static lab1.Main.main;
+import static cs.ingsw.lab1.Main.main;
 
 public class MainTest {
     @Test(invocationCount = 10, threadPoolSize = 80)
@@ -16,7 +16,7 @@ public class MainTest {
         Assert.assertEquals(nissan.viajar(4),"Automovil viajo  4.0 km y aún tiene 86.40 de combustible");   
     }
 
-    @Test(invocationCount = 10, threadPoolSize = 80)
+    @Test(invocationCount = 80, threadPoolSize = 80)
     public static void Test02(){
         Vehiculo volvo = new Camion(100, 0, 0.9);
         //logger.info(nissan.abastecer(20));

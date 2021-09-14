@@ -1,4 +1,4 @@
-package lab1;
+package cs.ingsw.lab1;
 
 public class Automovil extends Vehiculo{
     public Automovil(double capacidadCombustible, double cantidadCombustible, double consumoPorKilometro) {
