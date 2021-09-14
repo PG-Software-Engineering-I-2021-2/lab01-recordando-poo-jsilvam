@@ -11,8 +11,9 @@ public class Vehiculo {
         this.consumoPorKilometro = consumoPorKilometro;
     }
 
-    public void abastecer(double combustible) {
+    public String abastecer(double combustible) {
         this.cantidadCombustible += combustible;
+        return "Vehiculo no se puede reabastecer el tanque, está lleno";
     }
 
     public String viajar(int distancia) {
@@ -20,11 +21,9 @@ public class Vehiculo {
         String clase = this.getClass().getSimpleName();
         if (combustibleRequerido > this.cantidadCombustible) {
             return clase + " necesita reabastecimiento de combustible";
-            //System.out.println(clase + " necesita reabastecimiento de combustible");
         } else {
             this.cantidadCombustible -= combustibleRequerido;
             return clase + " viajo " + String.format(" %.1f", (double)distancia) + " km y aún tiene " + String.format("%.2f", this.cantidadCombustible) + " de combustible";
-            //System.out.println(clase + " viajo " + String.format(" %.1f", (double)distancia) + " km y aún tiene " + String.format("%.2f", this.cantidadCombustible) + " de combustible");
         }
     }
 }

@@ -6,12 +6,12 @@ public class Camion extends Vehiculo{
     }
 
     @Override
-    public void abastecer(double combustible) {
+    public String abastecer(double combustible) {
         if (combustible + this.cantidadCombustible <= this.capacidadCombustible) {
             this.cantidadCombustible += (combustible * 0.95);
-            System.out.println("La cantidad de combustible del camión es: " + String.format("%.2f", this.cantidadCombustible));
+            return "La cantidad de combustible del camión es: " + String.format("%.2f", this.cantidadCombustible);
         } else {
-            System.out.println("Camión no se puede reabastecer el tanque, está lleno.");
+            return "Camión no se puede reabastecer el tanque, está lleno.";
         }
     }
 }

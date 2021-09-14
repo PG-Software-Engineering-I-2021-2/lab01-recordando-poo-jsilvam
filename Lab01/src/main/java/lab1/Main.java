@@ -2,6 +2,11 @@ package lab1;
 
 public class Main {
     public static void main(String[] args) {
+        test();
+    }
+
+    public static boolean test() {
+
         Automovil auto = new Automovil(100, 10, 0.9);
         auto.abastecer(90);
         auto.abastecer(100);
@@ -12,5 +17,6 @@ public class Main {
         camion.abastecer(100);
         camion.viajar(12);
 
+        return true;
     }
 }
